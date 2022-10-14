@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <style>
+        body {
+            font: 12pt arial;
+        }
+        button {
+            font: 12pt arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Cálculo de Fatorial
+    </h1>
+    <p>
+        Escolha um número entre 1 e 21 e mostrarei e fatorial dele.
+    </p>
+    <section id="antes">
+        Número: <input type="number" id="numero" max="21" min="1" placeholder="Número:">
+        <input type="button" value="Fatorial" onclick="contar()">
+    </section>
+    <section id="depois">
+        <p>Digite o número e aperte o botão.</p>
+    </section>
+    <script>
+        function contar() {
+            var numero = document.getElementById('numero')
+            var dps = document.getElementById('depois')
+            var num = (numero.value)
+            dps.innerHTML += `<h2>Calculando ${num}...</h2>`
+            if (num.length == 0) {
+                alert('ERRO! DIGITE ALGO!')
+            } else {
+                var c = num
+                var fat = 1 
+                while (c > 1) {
+                    dps.innerHTML += `${c} x `
+                    fat *= c
+                    c--
+                }
+                dps.innerHTML += `1 = <strong>${fat.toLocaleString('pt-BR')}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

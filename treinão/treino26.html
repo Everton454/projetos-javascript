@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Inteligente</title>
+    <style>
+        body {
+            font: 12pt courier;
+        }
+        button {
+            font: 12pt courier;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Contagem 'Inteligente'
+    </h1>
+    <p> Coloque quaisquer dois valores , podendo ser positivo ou negativos. </p>
+    <p> Valor 1 : <input type="number" id="txti"></p>
+    <p> Valor 2 : <input type="number" id="txtf"></p>
+    <input type="button" value="Contar" onclick="contar()">
+    <section id="res">
+       <p> Preencha os dados acima e veja a contagem...</p>
+    </section>
+    <script>
+        function contar() {
+        var n1 = Number(document.getElementById('txti').value)
+        var n2 = Number(document.getElementById('txtf').value)
+        var res = document.getElementById('res')
+        var c
+        if (n1 < n2) {
+            c = n1
+            while (c <= n2) {
+                res.innerHTML += `${c} \u{1F449}`
+                c++
+            } 
+        }
+        else if (n2 < n1) {
+            c = n1
+            while (c >= n2) {
+                res.innerHTML += `${c} \u{1F449}`
+                c--
+            }
+        }
+        res.innerHTML += `\u{1F3C1} `
+        }
+</script>
+</body>
+</html>

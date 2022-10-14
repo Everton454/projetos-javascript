@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de formulário</title>
+    <style>
+        body {
+            font: 12pt courier;
+        }
+        button {
+            font: 12pt courier;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Contando de 0 até um número (Positivo) Qualquer 
+    </h1>
+    <p>Valor :<input type="number" id="numero">
+        <input type="button" value="Contar" onclick="contar()"></p>
+        <section id="res">
+            <p>
+                Preencha os dados e aperte o botão
+            </p>
+        </section>
+        <script>
+            function contar() {
+                var res = document.getElementById('res')
+                var num = document.getElementById('numero')
+                res.innerHTML = ``
+                if (num.value.length == 0) {
+                    alert('ERRO! digite um número maior que 0.')
+                } else {
+                var n = Number(num.value)
+                for (let c = 0; c <= n; c++) {
+                    res.innerHTML += `${c}  \u{1F449}`;
+                }
+                res.innerHTML += `\u{1F3C1}`
+            }
+            }
+        </script>
+</body>
+</html>

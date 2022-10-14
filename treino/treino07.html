@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <style>
+        div#mouse { 
+            font: normal 20pt arial;
+            background: rgb(253, 4, 4);
+            color: rgb(255, 123, 123);
+            height: 200px;
+            width: 200pt;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouse" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Pra Clicar 
+    </div>
+    <script>
+        var a = document.getElementById('mouse')
+
+        function clicar()
+       
+        {
+            a.innerText = 'Consegui!'
+            a.style.background = 'white'
+        }
+        function entrar()
+       
+        {
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+        function sair()
+        
+        {
+            a.innerText = 'Saiu!'
+            a.style.background = 'red'
+        }
+</script>
+</body>
+</html>

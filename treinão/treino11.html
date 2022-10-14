@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: 12pt arial;
+        }
+        button {
+            font: 12pt arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Média do aluno v2.0
+    </h1>
+    <button onclick="clicar()">
+        Calcular média
+    </button>
+    <section id="res">
+        <p>
+            A média aparece aqui...
+        </p>
+    </section>
+    <script>
+        function clicar() {
+            var nome = prompt('Qual o nome do aluno?')
+            var n1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`))
+            var n2 = Number(prompt(`Além de ${n1}, qual foi a outra nota de ${nome}?`))
+            var n3 = (n1 + n2) / 2 
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>:</p>`
+            res.innerHTML += `<p>As duas notas obtidas foram: <mark>${n1}</mark> e <mark>${n2}</mark>,</p>`
+            res.innerHTML += `<p>Então, a média final de <mark>${nome}</mark> é <mark>${n3}</mark>!</p>`
+            if (n3>=6) {
+                res.innerHTML += `<p>Parabéns! Continue assim.</p>` 
+            } else {
+                res.innerHTML += `<p>Tente de novo seu palhaço.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

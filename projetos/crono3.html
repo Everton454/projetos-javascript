@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRONÔMETRO</title>
+    <style>
+        body {
+            background-color: rgb(255, 0, 21);
+            font-size: 50pt;
+        }
+        button {
+            width: 150px;
+            height: 80px;
+        }
+        h1,h2 {
+            font: normal 30pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>CRONÔMETRO</h1>
+    <hr>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <button onclick="reset()">RESET</button>
+    <hr>
+    <h2 id="contador">00:00:00</h2>
+    <script>
+        var hr=00;
+        var min=00;
+        var seg=00;
+        var cont;
+        var tempo = 1000;
+
+        function start() {
+           cont = setInterval(timer, tempo);
+        }
+        function stop() {
+            clearInterval(cont);
+        }
+        function reset() {
+            clearInterval(cont);
+            hr=00;
+            min=00;
+            seg=00;
+            document.getElementById('contador').innerText = '00:00:00';
+        }
+        function timer() {
+            tmp = (hr < 10 ? '0'+ hr : hr) + ':' + (min<10 ? '0' + min : min) + ':' + (seg < 10 ? '0' + seg : seg);
+            document.getElementById('contador').innerText = tmp
+            seg++;
+            if (seg==60) {
+                seg=0;
+                min++
+            if (min==60) {
+                min=0;
+                hr++;
+            }
+        }}
+    </script>
+</body>
+</html>

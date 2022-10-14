@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo em JS</title>
+    <style>
+        body {
+            font:15pt courier;
+        }
+        button {
+            font:15pt courier;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Tente Adivinhar meu número
+    </h1>
+    <button onclick="clicar()" id="botao">
+        Tentar Adivinhar 
+    </button>
+    <section id="res">
+        <p>
+            já pensei em um valor entre 1 e 100...
+        </p>
+    </section>
+    <script>
+            var min = 1
+            var max = 100
+            var dif = max - min
+            var aleatorio = Math.random()
+            var num = min + Math.trunc(dif*aleatorio)
+        
+            function clicar() {
+            var numero = prompt ('Qual o seu palpite?')
+            var resp = document.getElementById('res')
+            var botao = document.getElementById('botao')
+            //resp.innerHTML = num
+            if (numero < num) {
+                resp.innerHTML += `<p>Você digitou ${numero}, mas o meu número é <strong>MAIOR!</strong></p>`
+            } if (numero > num) {
+                resp.innerHTML += `<p>Você digitou ${numero}, mas o meu número é <strong>MENOR!</strong></p>`
+            } if (numero == num) {
+                resp.innerHTML += `<p><strong>VOCÊ CONSEGUIU ADIVINHAR, VOCÊ É BOM NISSO!<strong></p>`
+                    botao.style.visibility = 'hidden'
+            }
+        }
+    </script>
+</body>
+</html>

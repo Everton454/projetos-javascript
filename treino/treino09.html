@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <style>
+        body
+        
+        div#box {
+            font:30pt normal courier;
+            background-color:yellow;
+            height: 300px;
+            width: 300px;
+            line-height:300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        é uma caixa
+    </div>
+<script>
+    var z = document.getElementById('box')
+    function clicar(){
+        z.innerText = 'clicou na caixa'
+        z.style.background = 'darkred'
+    }
+    function entrar(){
+        z.innerText = " entrou na caixa "
+        z.style.background = 'darkblue'
+    }
+    function sair(){
+        z.innerText = 'saiu da caixa'
+        z.style.background = 'darkgreen'
+        }
+</script>
+</body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa de calculadora</title>
+    <style>
+        body
+        {
+            background-color: cornflowerblue;
+            font: 25pt normal;
+        }
+        input {
+            height: 50px;
+            font: 25pt normal;
+            width: 100px;
+            text-align: center;
+            margin-top: 50px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        CALCULE: 
+    </h1>
+    <input type="number" id="nu1"> +
+    <input type="number" id="nu2"> =
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="bicep">
+        Resultado
+    </div>
+    <script>
+        function somar() {
+            var n1 = document.getElementById('nu1')
+            var n2 = document.getElementById('nu2')
+            var nt1 = Number(n1.value)
+            var nt2 = Number(n2.value)
+            var s = nt1 + nt2
+            bicep.innerHTML = ` ${s} ` 
+        }
+    </script>
+</body>
+</html>

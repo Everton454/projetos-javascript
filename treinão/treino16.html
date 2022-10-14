@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a Idade</title>
+    <style>
+        body {
+            font: 20pt;
+        }
+        button {
+            font: 20pt arial;
+            padding: 50px;
+        }
+        section {
+            font: 20pt courier;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Calculando a Idade
+    </h1>
+    <button onclick="clicar()">
+        Iniciar
+    </button>
+    <section id="res">
+        <p>Aqui aparece o cálculo...</p>
+    </section>
+    <script>
+        function clicar() {
+            var ano = prompt('Em que ano você nasceu?')
+            var res = document.getElementById('res')
+            var conta = 2022 - ano
+            res.innerHTML = `Quem nasceu em ${ano}, vai completar <strong>${conta}</strong> anos em 2022.`
+        }
+    </script>
+</body>
+</html>

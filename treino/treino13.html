@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino de calculadora</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font: 50pt normal;
+        }
+        input {
+            height: 50px;
+            width: 100px;
+            font: 25pt normal;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="num1"> +
+    <input type="number" id="num2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="pant">
+        Resultado
+    </div>
+    <script>
+        function somar() {
+            
+        var n1 = document.getElementById('num1')
+        var n2 = document.getElementById('num2')
+        var res = document.getElementById('pant')
+        var nm1 = Number(n1.value)
+        var nm2 = Number(n2.value)
+        var p = nm1 + nm2 
+        res.innerHTML = `a soma entre ${nm1} e ${nm2} é ${p}` 
+        }
+    </script>
+</body>
+</html>

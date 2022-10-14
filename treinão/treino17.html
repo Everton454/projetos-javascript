@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Números</title>
+    <style>
+        body {
+            font: 20pt courier;
+        }
+        button {
+            font: 20pt courier;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Gerador de números
+    </h1>
+    <button onclick="clicar()">
+        Clique em mim
+    </button>
+    <button onclick="limpar()">
+        Limpar
+    </button>
+    <section id="res">
+        <p>Aperte o botão acima e eu mostro um número de 1 a 100</p>
+    </section>
+    <script>
+        function clicar() {
+            var res = document.getElementById('res')
+            var min = 1
+            var max = 100
+            var dif = max - min
+            var aleatorio = Math.random()
+            var num = min + Math.trunc(dif*aleatorio)
+            res.innerHTML += `<p>O número que saiu foi o <strong>${num}<strong> !</p>`
+        }
+        function limpar() {
+            var res = document.getElementById('res')
+            res.innerHTML = null
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas Ações</title>
+    <style>
+        body {
+            font: 15pt courier;
+        }
+        button {
+            font: 15pt courier;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Múltiplas Ações
+    </h1>
+    <button onclick="clicar()">
+        Clique para iniciar
+    </button>
+    <section id="res">
+        <p>
+            Clique no botão para comecar.
+        </p>
+    </section>
+    <script>
+        function clicar() {
+            var resp = document.getElementById('res')
+            var n1 = Number(prompt('Primeiro número:'))
+            var n2 = Number(prompt('Segundo número:'))
+            var op = Number(prompt(`Valores Informados: ${n1} e ${n2}.
+O que fazer:
+- SOMAR digite 1, 
+- SUBTRAIR digite 2, 
+- MULTIPLICAR digite 3, 
+- DIVIDIR digite 4.`))
+            //resp.innerHTML += '<strong>Calculando...</strong>'
+            switch (op) {
+                case 1:
+                    resp.innerHTML += `<p>${n1} + ${n2} = <strong>${n1+n2}</strong></p>`
+                    break;
+            
+                case 2:
+                    resp.innerHTML += `<p>${n1} - ${n2} = <strong>${n1-n2}</strong></p>`
+                    break;
+
+                case 3:
+                    resp.innerHTML += `<p>${n1} X ${n2} = <strong>${n1*n2}</strong></p>`
+                    break;
+
+                case 4:
+                    resp.innerHTML += `<p>${n1} / ${n2} = <strong>${n1/n2}</strong></p>`
+                    break;
+
+                default:
+                    resp.innerHTML += `<p>Você escolheu uma opção inválida, Tente de novo.</p>`
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

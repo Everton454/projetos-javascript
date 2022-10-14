@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <style>
+        body {
+            font: 35pt normal;
+            background-color: chartreuse;
+        }
+        div#quads {
+            font: 25pt normal;
+            height: 250px;
+            width: 250px;
+            text-align: center;
+            background-color: rgb(90, 90, 70);
+            line-height: 250px;
+        }
+    </style>
+</head>
+<body>
+        <h1>
+            Título principal 
+        </h1>  
+        <p>
+            conteúdo
+        </p>
+        <div id="quads" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            Clica aqui
+        </div>
+</body>
+    <script>
+        var a = document.getElementById('quads')
+        
+        function clicar(){
+            a.innerText = 'cliquei'
+            a.style.background = "orange"
+        }
+        function entrar() {
+            a.innerText = 'entrei'
+            a.style.background = 'white'
+        }
+        function sair() {
+            a.innerText = 'saí'
+            a.style.background = "red"
+        }
+    </script>
+</html>

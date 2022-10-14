@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+           body {
+            font: 12pt Arial;
+        }
+        button {
+            font: 12pt Arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Somando dois números 
+    </h1>
+    <button onclick="clicar()">
+        Iniciar a soma 
+    </button>
+    <section id="res">
+        <p>O resultado sai aqui</p>
+    </section>
+    <script>
+        function clicar() {
+        var n1 = Number(prompt('digite o primeiro'))
+        var n2 = Number(prompt('digite o segundo'))
+        var n3 = n1 + n2 
+        var res = document.getElementById('res')
+        res.innerHTML = `O resultado é esse : ${n3}`
+        }
+    </script>
+</body>
+</html>

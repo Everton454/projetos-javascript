@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando de 1 a 10</title>
+    <style>
+         body {
+            font: 12pt courier;
+        }
+        button {
+            font: 12pt courier;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Contando de 1 a 10 (Marcando os pares)
+    </h1>
+    <button onclick="contar()">
+        Aperte aqui 
+    </button>
+    <section id="res">
+        <p>Aperte acima para contar. </p>
+    </section>
+    <script>
+        function contar() {
+            var res = document.getElementById('res')
+            var c = 1
+            while (c<=10) {
+                if (c % 2 == 0) {
+                    res.innerHTML += `<mark><strong>${c}</strong></mark> \u{1F449}`
+                } else {
+                    res.innerHTML += `${c} \u{1F449}`
+                }
+                c++
+            }
+            res.innerHTML += `${c} \u{1F3C1}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            background-color: cornsilk;
+            font: 30pt normal;
+        }
+        div#res {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Pra ver se vc tem multas
+    </h1>
+    Sua Velocidade: <input type="number" id="vel"> KM/H
+    <input type="button" value="Saber minha Velocidade" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var a = document.getElementById('vel')
+            var b = document.getElementById('res')
+            var c = Number(a.value)
+            res.innerHTML += `<p> Sua velocidade é de ${c} KM/H </p>`
+            if (c>100) {
+                res.innerHTML += `SUA VELOCIDADE É DE ${c} KM/H SEU PALHAÇO, VC N ESTÁ NUMA CORRIDA! `
+            }
+           }
+           res.innerHTML += '<p> È pra dirigir sempre com cinto e com cuidado, palhaço! </p>'
+    </script>
+</body>
+</html>

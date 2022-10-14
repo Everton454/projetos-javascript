@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font: 12pt courier;
+        }
+        button {
+            font: 12pt courier;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Super Tabuada
+    </h1>
+    <p>
+        Escolha um número na caixa a seguir e te mostrarei a tabuada dele:
+    </p>
+    Número: <input type="number" id="numero">
+    <input type="button" value="Multiplicar" onclick="contar()">
+    <section id="res">
+        <p>Aperte acima e veja a tabuada.</p>
+    </section>
+    <script>
+        function contar() {
+            var num = document.getElementById('numero')
+            var res = document.getElementById('res')
+            if (num.length == 0) {
+                alert('ERRO! Digite algo!')
+            } else {
+                var num = (num.value)
+                var c = 1 
+                res.innerHTML += `Tabuada de ${num}<br>`
+                while (c <= 10) {
+                    res.innerHTML += `${num} X ${c} = ${num*c}<br>`
+                    c++
+                }
+            }
+        }
+    </script>
+</body>
+</html>

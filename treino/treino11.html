@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font: 50pt normal tahoma;
+            background: yellow;
+        }
+        input {
+            font: 40pt normal tahoma;
+            width: 150px;
+        }
+        div#res {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    calcula ai :
+    <input type="number" id="n1"> +
+    <input type="number" id="n2">
+    <input type="button" value="Soma ai" onclick="somar()">
+    <div id="res">O Resultado</div>
+    <script>
+        function somar(){
+            var a1 = document.getElementById('n1')
+            var a2 = document.getElementById('n2')
+            var res = document.getElementById('res')
+            var b1 = Number(a1.value)
+            var b2 = Number(a2.value)
+            var x = b1 + b2
+            res.innerText = `a soma dos valores ${b1} e ${b2} é ${x}`
+        }
+    </script>
+</body>
+</html>

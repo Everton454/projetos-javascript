@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de país</title>
+    <style>
+        body {
+            background-color: greenyellow;
+            font: 30pt normal tahoma;
+            height: 150px;
+            text-align: center;
+            }
+            h1 {color: darkblue;}
+            
+    </style>
+</head>
+<body>
+    <h1>
+        Seletor de País
+    </h1>
+    País onde vive: <input type="text" id = 'pais'>
+    <input type="button" value="Verificar país" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var p = document.getElementById('pais')
+            var p2 = document.getElementById('res')
+            var p3 = String(p.value)
+            res.innerHTML = ` Você mora no(a) ${p3}, parabéns! ` 
+            if (p3!='Brasil') {
+                res.innerHTML += `<p> Você está longe do melhor país do mundo !<p/>`
+                }
+        }
+    </script>
+</body>
+</html>

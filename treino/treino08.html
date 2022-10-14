@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tijolo 2</title>
+    <style>
+        div#dorsal
+        {
+            font: 30pt normal arial;
+            background: green;
+            color: black;
+            height: 250px;
+            width: 250px;
+            line-height: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id= "dorsal" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+        DIV
+    </div>
+    <script>
+        var c = document.getElementById('dorsal')
+
+        function clicar(){
+            c.innerText = 'Consegui!'
+            c.style.background = 'white'
+        }
+        function entrar(){
+            c.innerText = 'Entrei!'
+            c.style.background = 'blue'
+        }
+        function sair(){
+            c.innerText = 'Saí!'
+            c.style.background = 'red'
+        }
+    </script>
+</body>
+</html>

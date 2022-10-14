@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <style>
+        body {
+            font: 20pt arial;
+        }
+        button {
+            font: 20pt arial;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Maior Valor
+    </h1>
+    <button onclick="clicar()">
+        Clique para começar
+    </button>
+    <section id="res">
+       <p> o resultado vai aparecer aqui.</p>
+    </section>
+    <script>
+        function clicar() {
+            var n1 = prompt('Digite um número')
+            var n2 = prompt('Digite outro número')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Analisando os valores ${n1} e ${n2}: </p>` 
+            if (n1==n2) {
+                res.innerHTML += `<p>Os valores <mark>${n1}</mark> e <mark>${n2}</mark> são iguais!</p>`
+            }
+            if (n1>n2) {
+                res.innerHTML += `<p>O <mark>${n1}</mark> é maior que o <mark>${n2}</mark></p>`
+            }
+            if (n2>n1) {
+                res.innerHTML += `<p>O <mark>${n2}</mark> é maior que o <mark>${n1}</mark></p>`
+            }
+        }
+    </script>
+</body>
+</html>

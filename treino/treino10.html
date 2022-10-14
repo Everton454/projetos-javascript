@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <style>
+        body {
+            font: 25pt normal courier;
+            background-color: yellow;
+            color:black;
+        }
+        input {
+            font: 20pt normal courier;
+            width: 150px;
+        }
+        div#res {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        calcule qq coisa: 
+    </h1>
+    <input type="number" id="n1"> +
+    <input type="number" id="n2"> = 
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        
+        function somar(){
+        var nm1 = document.getElementById('n1')
+        var nm2 = document.getElementById('n2')
+        var res = document.getElementById('res')
+        var a1 = Number(nm1.value)
+        var a2 = Number(nm2.value)
+        var x = a1 + a2 
+        res.innerHTML = `a soma entre ${a1} e ${a2} é ${x}`
+        }
+    </script>
+</body>
+</html>
