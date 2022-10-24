@@ -10,7 +10,7 @@ body {
 
 main {
     background-color: white;
-    width: 560px;
+    width: 700px;
     margin: auto;
     padding: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
@@ -26,7 +26,7 @@ h2 {
     color: rgb(58, 0, 112);
 }
 
-img.lado {
+.lado {
     float: right;
 }
 
