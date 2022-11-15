@@ -13,7 +13,7 @@ let n2 = 5
 let n3 = 10
 
  var ternario = 11 % 2 === 0 ? "par" : "impar";
- console.log(ternario);*/
+ console.log(ternario);
 
  let v1 = 10
  let v2 = "10"
@@ -23,6 +23,12 @@ let n3 = 10
  console.log(typeof(v1));
  console.log(typeof(v2));
  console.log(typeof(v3));
- console.log(typeof(v4));
+ console.log(typeof(v4));*/
 
+var n1 = [1, 2, 3, 4, 5] ;
+var n2 = [100, 200, 300, 400, 500];
+var n3;
 
+console.log(n1);
+console.log(n2);
+console.log(n3);
